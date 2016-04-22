@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="1" >
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:text="2x2 button grid"
+        android:textSize="32dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/IN_ClassName_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ClassNameText"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/IN_ClassName_ET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minEms="4"
+            android:textSize="24dp" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button 3" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Button 4" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/UIGrid"
+        android:layout_width="match_parent"
+        android:layout_column="0"
+        android:layout_gravity="center_horizontal"
+        android:layout_row="3"
+        android:columnCount="6"
+        android:rowCount="8" >
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/IN_WeekDay_TV"
+            android:layout_column="1"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:text="@string/Days" />
+
+        <TextView
+            android:id="@+id/IN_StartTime_TV"
+            android:layout_column="2"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:text="@string/StartTime" />
+
+        <TextView
+            android:id="@+id/IN_EndTime_TV"
+            android:layout_column="3"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:text="@string/EndTime" />
+
+        <TextView
+            android:id="@+id/IN_AddTime_TV"
+            android:layout_column="4"
+            android:layout_gravity="left"
+            android:layout_row="0"
+            android:text="@string/AddText" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/IN_Day_BT_0"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="一" />
+
+        <Button
+            android:id="@+id/IN_StartTime_BT_0"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="15:00" />
+
+        <Button
+            android:id="@+id/IN_EndTime_BT_0"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:text="17:00" />
+
+        <Button
+            android:id="@+id/IN_AddTime_BT_0"
+            android:layout_column="4"
+            android:layout_row="1"
+            android:text="+" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </GridLayout>
+
+</GridLayout>

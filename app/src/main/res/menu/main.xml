@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- android:icon="@android:drawable/ic_input_add" -->
+    
+    
+    <item
+        android:id="@+id/action_insert"
+        android:icon="@drawable/ic_action_new"
+        android:title="新增課程" 
+        app:showAsAction="never"  />
+        
+    <!-- 
+	<item
+        android:id="@+id/action_photo"
+        android:icon="@drawable/ic_action_camera"
+        android:title="尋找加入"
+        app:showAsAction="never"  />
+	
+    <item
+        android:id="@+id/action_rec"
+        android:icon="@drawable/ic_action_mic"
+        android:title="組成網路" 
+        app:showAsAction="never"  />
+
+	
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    -->
+    <item
+        android:id="@+id/action_formnetwork"
+        android:icon="@drawable/ic_action_mic"
+        android:title="組成網路" 
+        app:showAsAction="never"  />
+    
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_openRingConnectionService"
+        android:icon="@drawable/ic_action_settings"
+        android:title="開啟真Service"
+        app:showAsAction="never" />
+    
+    
+    <item
+        android:id="@+id/action_discoveryRingService"
+        android:icon="@drawable/ic_action_settings"
+        android:title="Discovery Ring Service"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_Connect_toMAC"
+        android:icon="@drawable/ic_action_settings"
+        android:title="單獨連線裝置"
+        app:showAsAction="never" />
+    
+    <!-- 
+    <item
+        android:id="@+id/action_discoveryCGService"
+        android:icon="@drawable/ic_action_settings"
+        android:title="Discovery Cross Group Service"
+        app:showAsAction="never" />
+     -->
+    
+    <item
+        android:id="@+id/action_open_one_service"
+        android:icon="@drawable/ic_action_settings"
+        android:title="to test link"
+        app:showAsAction="never" />
+    
+    <item
+        android:id="@+id/action_broakcast_data"
+        android:icon="@drawable/ic_action_settings"
+        android:title="Broadcast Data"
+        app:showAsAction="never" />
+    
+    
+    
+    <item
+        android:id="@+id/action_control"
+        android:icon="@drawable/ic_action_settings"
+        android:title="WiFi P2P Action"
+        app:showAsAction="never" />
+    
+    
+    
+    
+    
+    
+    
+    
+</menu>

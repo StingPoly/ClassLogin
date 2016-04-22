@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- android:icon="@android:drawable/ic_input_add" -->
+    
+    
+    
+    <item
+        android:id="@+id/action_photo"
+        android:icon="@drawable/ic_action_camera"
+        android:title="照相"
+        app:showAsAction="always"  />
+    <item
+        android:id="@+id/action_rec"
+        android:icon="@drawable/ic_action_mic"
+        android:title="錄音" 
+        app:showAsAction="always"  />
+    
+    <item
+        android:id="@+id/action_insert"
+        android:icon="@drawable/ic_action_new"
+        android:title="新增筆記" 
+        app:showAsAction="always"  />
+    <!-- 
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+     -->
+    
+
+
+	
+</menu>

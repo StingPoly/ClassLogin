@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.classlogin"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:configChanges="orientation|keyboardHidden|screenSize" >
+	
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+    
+    <uses-permission android:name="com.app.classlogin.permission.C2D_MESSAGE"/>
+    <permission android:name="com.app.classlogin.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  	
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	
+	<uses-feature android:name="android.hardware.camera"/>
+	<uses-feature android:name="android.hardware.camera.autofocus"/>
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        <!-- android:theme="@style/AppTheme" -->
+        <!-- android:name="com.app.classlogin.MainClassCalendarActivity"  -->
+        <activity
+            android:name= "com.app.classlogin.MainClassCalendarActivity"  
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.app.classlogin.ClassLoginActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.ClassListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.NetLocationActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.CalendarMenuActivity" android:screenOrientation="portrait"></activity>
+        <!-- <activity android:name="com.app.classlogin.MainClassCalendarActivity" android:screenOrientation="portrait"></activity> -->
+        <activity android:name="com.app.classlogin.MainClassCalendarInsertEventActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.ClassInformationPageActivity" android:screenOrientation="portrait" ></activity>
+        <activity android:name="com.app.classlogin.NoteInsertPageActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.NoteShowPhotoActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.NoteRecVoiceManagerActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.app.classlogin.NoteVoicePlayActivity" android:screenOrientation="portrait"></activity>
+        
+        <!-- 接收 GCM 的 receiver -->
+    	<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+	        <intent-filter>
+	            <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+	            <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+	            <category android:name="com.app.classlogin" />
+	        </intent-filter>
+    	</receiver>
+    	
+    	<!-- GCM service -->
+    	<service android:enabled="true" android:name="FileTransferService" />
+    	<!--
+    	<service android:enabled="true" android:name="onHandleIntent" />
+    	-->
+    	<service android:enabled="true" android:name="SendHandshake" />
+    	
+    	<service android:name=".GCMIntentService" />
+    	
+    	
+        
+    </application>
+
+</manifest>

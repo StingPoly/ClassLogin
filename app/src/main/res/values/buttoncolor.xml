@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="SelectedButton">#ff080808</color>
+    <color name="SelectedButtonText">#ffffffff</color>
+    <color name="UnSelectedButton">#ffffffff</color>
+    <color name="UnSelectedButtonText">#ff000077</color>
+    
+</resources>

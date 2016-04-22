@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 
+            <Button
+		        android:id="@+id/CancerNotebutton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/NoteContenteditText"
+		        android:layout_alignParentBottom="true"
+		        android:text="Cancer" />
+		
+		    <Button
+		        android:id="@+id/SaveNotebutton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignBaseline="@+id/CancerNotebutton"
+		        android:layout_alignParentBottom="true"
+		        android:layout_alignTop="@+id/CancerNotebutton"
+		        android:layout_toRightOf="@+id/CancerNotebutton"
+		        android:text="Save" />
+		         -->
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/Title"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            
+
+            <EditText
+                android:id="@+id/NoteTitleeditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView1"
+                android:ems="10"
+                android:hint="@string/NoteInsertTitle"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/NoteContenteditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:ems="10"
+                android:gravity="top|center_vertical"
+                android:hint="@string/NoteInsertContent"
+                android:layout_below="@+id/textView2"
+                android:inputType="textMultiLine"
+                android:maxLength="1200"
+                android:textSize="20sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/NoteTitleeditText"
+                android:text="@string/Content"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            
+
+        </RelativeLayout>
+    </ScrollView>
+
+    
+
+</RelativeLayout>
