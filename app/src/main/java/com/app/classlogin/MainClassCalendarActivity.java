@@ -206,7 +206,7 @@ public class MainClassCalendarActivity extends ActionBarActivity implements
 
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.mainclasscalendar_activity);
+		setContentView(R.layout.mainclass_tablayout);
 
 		Toolbar toolBar = (Toolbar) findViewById(R.id.index_toolbar);
 //		setSupportActionBar(toolBar);
@@ -542,7 +542,7 @@ public class MainClassCalendarActivity extends ActionBarActivity implements
 	public boolean onCreateOptionsMenu(Menu menu){
 //		getMenuInflater().inflate(R.menu.option, menu);
 		getMenuInflater().inflate(R.menu.main, menu);
-		menuitem = menu.findItem(R.id.action_insert);
+		menuitem = menu.findItem(R.id.action_insert_class);
 		menuitem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		
 		
@@ -568,22 +568,7 @@ public class MainClassCalendarActivity extends ActionBarActivity implements
 		final String[] ListServiceName = {"RingNetwork_1", "RingNetwork_2", "RingNetwork_3"};
 		Builder ListAlertDialog = new AlertDialog.Builder(this);
 		final Builder RoleListDialog = new AlertDialog.Builder(this), Select_Target_MAC_0 = new AlertDialog.Builder(this), Select_Target_MAC_1 = new AlertDialog.Builder(this), Select_Target_MAC_2 = new AlertDialog.Builder(this);
-		
-		/* ASUS: 7a:24:af:0a:ed:05
-		 * 
-		 * EQLT: 94:ce:2c:7d:78:5b
-		 * EQLT: 96:ce:2c:7d:78:52
-		 * 
-		 * C8QJ: 94:ce:2c:7c:f6:73
-		 * C8QJ: 96:ce:2c:7c:f6:72
-		 * 
-		 * NEX7: da:50:e6:8d:40:b1
-		 * HTCS: 86:7a:88:0b:11:85
-		 * Sams: c6:88:e5:a5:19:52
-		 * ¤p¦Ì:  ae:f7:f3:ce:d5:1d
-		 * SIII: 5e:0a:5b:d6:5d:4a
-		 * */
-		
+
 		final String[] device_list = {"ASUS", "Sony-EQLT", "Sony-C8QJ", "NEXUS 7", "HTC_ONESV", "Samsung-white", "SIII", "MI"};
 		final String[] device_MAC_list = {"7a:24:af:0a:ed:05", "96:ce:2c:7d:78:52", "96:ce:2c:7c:f6:72", "da:50:e6:8d:40:b1", "86:7a:88:0b:11:85", "c6:88:e5:a5:19:52", "5e:0a:5b:d6:5d:4a", "ae:f7:f3:ce:d5:1d"};
 		

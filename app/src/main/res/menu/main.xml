@@ -5,7 +5,7 @@
     
     
     <item
-        android:id="@+id/action_insert"
+        android:id="@+id/action_insert_class"
         android:icon="@drawable/ic_action_new"
         android:title="新增課程" 
         app:showAsAction="never"  />
