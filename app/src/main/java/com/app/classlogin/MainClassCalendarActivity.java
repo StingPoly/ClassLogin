@@ -43,6 +43,7 @@ import java.util.concurrent.TimeUnit;
 
 import android.annotation.SuppressLint;
 //import android.app.ActionBar;
+import android.app.Activity;
 import android.app.AlertDialog;
 //import android.app.Fragment;
 import android.app.AlertDialog.Builder;
@@ -84,8 +85,8 @@ import android.provider.AlarmClock;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.Menu;
@@ -99,7 +100,7 @@ import android.support.v7.widget.Toolbar;
 
 //ActionBar
 @SuppressLint("NewApi")
-public class MainClassCalendarActivity extends ActionBarActivity implements
+public class MainClassCalendarActivity extends AppCompatActivity implements
 		MainClassCalendarFragment.HandingDateSeletedListener, PeerListListener,
 		ChannelListener, ConnectionInfoListener, GroupInfoListener{
 
@@ -538,27 +539,30 @@ public class MainClassCalendarActivity extends ActionBarActivity implements
 		unregisterReceiver(receiver);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu){
-//		getMenuInflater().inflate(R.menu.option, menu);
-		getMenuInflater().inflate(R.menu.main, menu);
-		menuitem = menu.findItem(R.id.action_insert_class);
-		menuitem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-		
-		
-		
-//		menu.getItem(1).setEnabled(false);
-//		menuitem.setEnabled(false);
-		/*if(WifiP2p_Enable){
-//			menuitem.setVisible(true);
-			menuitem.setEnabled(true);
-		}else{
-//			menuitem.setVisible(false);
-			menuitem.setEnabled(false);
-		}*/
-
-		return true;
-	}
+	/*
+	* ActionBarActivity function (need delete)
+	* */
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu){
+////		getMenuInflater().inflate(R.menu.option, menu);
+//		getMenuInflater().inflate(R.menu.main, menu);
+//		menuitem = menu.findItem(R.id.action_insert_class);
+//		menuitem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+//
+//
+//
+////		menu.getItem(1).setEnabled(false);
+////		menuitem.setEnabled(false);
+//		/*if(WifiP2p_Enable){
+////			menuitem.setVisible(true);
+//			menuitem.setEnabled(true);
+//		}else{
+////			menuitem.setVisible(false);
+//			menuitem.setEnabled(false);
+//		}*/
+//
+//		return true;
+//	}
 
 	public boolean onOptionsItemSelected(MenuItem item){
 		Intent intent = new Intent();
