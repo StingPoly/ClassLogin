@@ -215,17 +215,18 @@ public class MainClassCalendarActivity extends AppCompatActivity implements
 //		final ActionBar actionbar = getSupportActionBar();
 
 		// Add Tab
-		List<Fragment> fragments = new ArrayList<Fragment>();
-		fragments.add(new MainClassCalendarFragment());
-		fragments.add(new MainClassListFragment());
-
-		ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-		if(viewPager != null){
-			viewPager.setAdapter(new MainClassPageAdapter(getSupportFragmentManager(), fragments, MainClassCalendarActivity.this));
-		}
-
-		TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-		tabLayout.setupWithViewPager(viewPager);
+//
+//		List<Fragment> fragments = new ArrayList<Fragment>();
+//		fragments.add(new MainClassCalendarFragment());
+//		fragments.add(new MainClassListFragment());
+//
+//		ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+//		if(viewPager != null){
+//			viewPager.setAdapter(new MainClassPageAdapter(getSupportFragmentManager(), fragments, MainClassCalendarActivity.this));
+//		}
+//
+//		TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+//		tabLayout.setupWithViewPager(viewPager);
 
 //		Fragment CalendarFragment = new MainClassCalendarFragment();
 //		Fragment ClassListFragment = new MainClassListFragment();
