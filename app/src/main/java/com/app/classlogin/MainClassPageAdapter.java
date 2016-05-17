@@ -20,7 +20,7 @@ public class MainClassPageAdapter extends FragmentStatePagerAdapter{
         super(fm);
         this.context = context;
         this.fragments = fragments;
-        this.title = frag
+//        this.title = fragments.title;
     }
 
     @Override
