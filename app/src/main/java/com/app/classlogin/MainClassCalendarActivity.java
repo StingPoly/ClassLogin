@@ -207,18 +207,35 @@ public class MainClassCalendarActivity extends AppCompatActivity implements
 
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.mainclass_tablayout);
+		setContentView(R.layout.mainclasscalendar_activity);
 
 		Toolbar toolBar = (Toolbar) findViewById(R.id.index_toolbar);
+//		toolBar.setLogo(R.drawable.ic_launcher);
+
 //		setSupportActionBar(toolBar);
 
-//		final ActionBar actionbar = getSupportActionBar();
+		ActionBar actionBar = getSupportActionBar();
+//		actionBar.setDisplayShowTitleEnabled(false);
+
+
+
+		List<Fragment> fragments = new ArrayList<Fragment>();
+		fragments.add(new MainClassCalendarFragment());
+		fragments.add(new MainClassListFragment());
+
+		ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+		if (viewPager != null) {
+			viewPager.setAdapter(new MainClassPageAdapter(getSupportFragmentManager(), fragments , MainClassCalendarActivity.this));  //??Adapter?viewPager
+		}
+
+		TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+		tabLayout.setupWithViewPager(viewPager);
+
+
+//		setSupportActionBar(toolBar);
+//		actionBar.setTitle("ExCL");
 
 		// Add Tab
-//
-//		List<Fragment> fragments = new ArrayList<Fragment>();
-//		fragments.add(new MainClassCalendarFragment());
-//		fragments.add(new MainClassListFragment());
 //
 //		ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
 //		if(viewPager != null){
